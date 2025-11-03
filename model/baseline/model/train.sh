@@ -1,0 +1,27 @@
+mace_run_train \
+  --name="periodic_r2scan_gen3gen4" \
+  --model="MACE" \
+  --multiheads_finetuning=False \
+  --train_file="train.xyz" \
+  --valid_fraction=0.05 \
+  --test_file="test.xyz" \
+  --energy_weight=1.0 \
+  --forces_weight=1.0 \
+  --energy_key="REF_energy" \
+  --forces_key="REF_forces" \
+  --r_max=6.0 \
+  --scaling="rms_forces_scaling" \
+  --num_channels=128 \
+  --max_L=0 \
+  --batch_size=3 \
+  --max_num_epochs=400 \
+  --swa \
+  --start_swa=300 \
+  --ema \
+  --ema_decay=0.99 \
+  --amsgrad \
+  --default_dtype="float64" \
+  --device=cuda \
+  --seed=3 \
+  --restart_latest \
+  --save_cpu

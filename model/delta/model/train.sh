@@ -1,0 +1,24 @@
+mace_run_train \
+  --name="delta_r2scancc_55_aims_orca_jul_qz_tightpno" \
+  --model="MACE" \
+  --multiheads_finetuning=False \
+  --train_file="train.xyz" \
+  --valid_fraction=0.05 \
+  --test_file="test.xyz" \
+  --energy_weight=1000 \
+  --energy_key="REF_energy" \
+  --r_max=4 \
+  --num_channels=64 \
+  --max_L=0 \
+  --batch_size=10 \
+  --max_num_epochs=300 \
+  --forces_weight=0.0 \
+  --scaling="no_scaling" \
+  --ema \
+  --ema_decay=0.99 \
+  --amsgrad \
+  --default_dtype="float64" \
+  --device=cuda \
+  --seed=3 \
+  --restart_latest \
+  --save_cpu

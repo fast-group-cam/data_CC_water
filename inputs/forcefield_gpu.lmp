@@ -1,0 +1,9 @@
+############################################################
+############            Model Details          ############
+############################################################
+
+
+pair_style hybrid/overlay mace no_domain_decomposition mace no_domain_decomposition
+
+pair_coeff    * *  mace 1 /PATH/TO/LAMMPS/BASELINE/GPU/MODEL O H
+pair_coeff    * *  mace 2 /PATH/TO/LAMMPS/DELTA/GPU/MODEL O H
