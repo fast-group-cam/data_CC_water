@@ -1,0 +1,17 @@
+! xyzfile DLPNO-CCSD(T) TightPNO VeryTightSCF NOCOSX
+%pal
+nprocs 16
+end
+%maxcore 37500
+%scf
+        AutoStart true
+end
+%basis
+        NewGTO O "aug-cc-pVQZ" end
+        NewGTO H "cc-pVQZ" end
+        NewAuxCGTO O "aug-cc-pVQZ/C" end
+        NewAuxCGTO H "cc-pVQZ/C" end
+end
+
+
+* xyzfile 0 1 geom.xyz
