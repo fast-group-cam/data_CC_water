@@ -4,7 +4,7 @@ This repository contains supplementary data supporting the findings of the paper
 
 Towards Routine Condensed Phase Simulations with Delta-Learned Coupled Cluster
 Accuracy: Application to Liquid Water:
-[\'https://doi.org/10.1021/acs.jctc.5c01377\']https://doi.org/10.1021/acs.jctc.5c01377)
+[https://doi.org/10.1021/acs.jctc.5c01377](https://doi.org/10.1021/acs.jctc.5c01377)
 
 by Niamh O'Neill, Benjamin Xu Shi, William J.Baldwin, William C. Witt, G'abor Cs'anyi, Julian D. Gale, Angelos Michaelides and Christoph Schran
 
