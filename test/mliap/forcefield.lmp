@@ -1,0 +1,43 @@
+############################################################
+############            Atom Types            ############
+############################################################
+#@ 2 atom types
+variable O equal 1
+variable H equal 2
+
+############################################################
+############            Atom Masses            ############
+############################################################
+mass ${O} 15.9994
+mass ${H} 1.00784
+
+###########################################################
+###########            Atom Charges            ############
+###########################################################
+############################################################
+############        NNP Parameters             #############
+############################################################
+#
+#
+#atom_modify   map yes
+#newton        on
+
+#read_data   ./init.data
+#
+#
+#pair_style hybrid/overlay mliap unified periodic_r2scan_gen3gen4_stagetwo.model-mliap_lammps.pt mliap unified periodic_r2scan_gen3gen4_stagetwo.model-mliap_lammps.pt 0
+pair_style hybrid/overlay mliap unified /mnt/ceph/users/noneill/reactive-water/data_CC_water/model/baseline/model/periodic_r2scan-mliap_lammps.pt 0 mliap unified /mnt/ceph/users/noneill/reactive-water/data_CC_water/model/delta/model/delta_r2scancc-mliap_lammps.pt 0
+
+#pair_style      mliap unified periodic_r2scan_gen3gen4_stagetwo.model-mliap_lammps.pt 0
+pair_coeff * * mliap:1 O H
+pair_coeff * * mliap:2 O H
+
+#pair_style hybrid/overlay mliap unified periodic_r2scan_gen3gen4_compiled.model-lammps.pt 0 mliap unified delta_r2scancc_55_aims_orca_jul_qz_tightpno.model-lammps.pt 0
+#
+#pair_coeff * * 1 O H
+#pair_coeff * * 2 O H
+#
+#
+#pair_style hybrid/overlay mliap unified /mnt/ceph/users/noneill/periodic-ccsdt-water/251106_NPT_scan/ccsdt/delta_r2scancc_55_aims_orca_jul_qz_tightpno.model-mliap_lammps.pt 0 mliap unified /mnt/ceph/users/noneill/periodic-ccsdt-water/251106_NPT_scan/ccsdt/periodic_r2scan_gen3gen4_stagetwo.model-mliap_lammps.pt 0
+#pair_coeff    * * 1 O H
+#pair_coeff    * * 2 O H

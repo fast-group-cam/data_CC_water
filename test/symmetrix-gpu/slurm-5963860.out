@@ -1,0 +1,44 @@
+
+Lmod is automatically replacing "openblas/single-0.3.29" with
+"intel-oneapi-mkl/2024.2.2".
+
+--------------------------------------------------------------------------
+Ignoring value for oob_tcp_if_exclude on workergpu016 (10.250.112.0/20: Did not find interface matching this subnet).
+(You can safely ignore this message.)
+--------------------------------------------------------------------------
+LAMMPS (10 Sep 2025)
+KOKKOS mode with Kokkos version 4.6.2 is enabled
+  using double precision
+  using view layout = legacy
+  will use up to 1 GPU(s) per node
+Kokkos::OpenMP::initialize WARNING: OMP_PROC_BIND environment variable not set
+  In general, for best performance with OpenMP 4.0 or better set OMP_PROC_BIND=spread and OMP_PLACES=threads
+  For best performance with OpenMP 3.1 set OMP_PROC_BIND=true
+  For unit testing set OMP_PROC_BIND=false
+
+MPI detected: For OpenMP binding to work as intended, MPI ranks must be bound to exclusive CPU sets.
+
+  using 1 OpenMP thread(s) per MPI task
+New timer settings: style=normal  mode=nosync  timeout=23:55:00
+ERROR: Must use 'newton off' with KOKKOS package option 'neigh full' (src/KOKKOS/kokkos.cpp:713)
+Last input line: newton on
+corrupted size vs. prev_size in fastbins
+[workergpu016:635774] *** Process received signal ***
+[workergpu016:635774] Signal: Aborted (6)
+[workergpu016:635774] Signal code:  (-6)
+[workergpu016:635774] [ 0] /lib64/libpthread.so.0(+0x12990)[0x15554c612990]
+[workergpu016:635774] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x15554b44e5af]
+[workergpu016:635774] [ 2] /lib64/libc.so.6(abort+0x127)[0x15554b421ee5]
+[workergpu016:635774] [ 3] /lib64/libc.so.6(+0x8f887)[0x15554b48f887]
+[workergpu016:635774] [ 4] /lib64/libc.so.6(+0x96b8c)[0x15554b496b8c]
+[workergpu016:635774] [ 5] /lib64/libc.so.6(+0x975f4)[0x15554b4975f4]
+[workergpu016:635774] [ 6] /lib64/libc.so.6(+0x99c88)[0x15554b499c88]
+[workergpu016:635774] [ 7] /lib64/libc.so.6(__libc_calloc+0x86)[0x15554b49c1f6]
+[workergpu016:635774] [ 8] /mnt/sw/nix/store/hfz0assy0i6nxj3l7f3vfl6md1794lfs-cuda-12.5.1/lib64/libcudart.so.12(+0x3fa3b)[0x155548f8fa3b]
+[workergpu016:635774] [ 9] /mnt/sw/nix/store/hfz0assy0i6nxj3l7f3vfl6md1794lfs-cuda-12.5.1/lib64/libcudart.so.12(+0x42fcc)[0x155548f92fcc]
+[workergpu016:635774] [10] /mnt/sw/nix/store/hfz0assy0i6nxj3l7f3vfl6md1794lfs-cuda-12.5.1/lib64/libcudart.so.12(+0x26905)[0x155548f76905]
+[workergpu016:635774] [11] /mnt/sw/nix/store/hfz0assy0i6nxj3l7f3vfl6md1794lfs-cuda-12.5.1/lib64/libcudart.so.12(+0x297fd)[0x155548f797fd]
+[workergpu016:635774] [12] /lib64/libc.so.6(__cxa_finalize+0xf7)[0x15554b451277]
+[workergpu016:635774] [13] /mnt/home/bshi1/ceph/Programs/gpu/lammps-symmetrix/lammps-symmetrix/lammps/build-gpu/libkokkoskernels.so(+0x689037)[0x15553ae89037]
+[workergpu016:635774] *** End of error message ***
+/var/spool/slurmd/job5963860/slurm_script: line 35: 635774 Aborted                 (core dumped) $EXEC -k on g 1 -sf kk -in lammps-full.inp -v runID 0

@@ -1,0 +1,30 @@
+LAMMPS (10 Sep 2025 - Development - patch_10Sep2025-395-g003e40f7f6-modified)
+/mnt/home/bshi1/Programs/venvs/mace-torch-lammps/lib/python3.11/site-packages/e3nn/o3/_wigner.py:10: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+KOKKOS mode with Kokkos version 4.7.1 is enabled
+  using double precision
+  using view layout = legacy
+  will use up to 1 GPU(s) per node
+  using 1 OpenMP thread(s) per MPI task
+New timer settings: style=normal  mode=nosync  timeout=23:55:00
+
+The 'box' command has been removed and will be ignored
+
+Reading data file ...
+  orthogonal box = (0 0 0) to (15.541748 15.541748 15.541748)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  378 atoms
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.001 seconds
+  read_data CPU = 0.039 seconds
+Changing box ...
+  triclinic box = (0 0 0) to (15.541748 15.541748 15.541748) with tilt (0 0 0)
+ERROR: Pair coeff for hybrid has invalid style: mliap:1 (src/KOKKOS/pair_hybrid_overlay_kokkos.cpp:63)
+Last input line: pair_coeff * * mliap:1 O H

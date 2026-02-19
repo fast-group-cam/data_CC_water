@@ -1,0 +1,7 @@
+############################################################
+############            Model Details          ############
+############################################################
+
+pair_style    hybrid/overlay symmetrix/mace symmetrix/mace
+pair_coeff    * * symmetrix/mace 1 /PATH/TO/PERIODIC/LAMMPS/CPU/MODEL O H
+pair_coeff    * * symmetrix/mace 2 /PATH/TO/DELTA/LAMMPS/CPU/MODEL O H
